@@ -51,7 +51,6 @@ class Runner(object):
         cols = [col[0] for col in cursor.description]
         rows = cursor.fetchall()
         df = pd.DataFrame(rows, columns=cols)
-        #raise Exception(df)
         # 3. Email HTML template
         html_template = """
           <p>Hello {{ first_name }},</p>
